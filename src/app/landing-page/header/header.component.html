@@ -1,0 +1,32 @@
+<header class="header_area">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <div class="menu_area">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logo.png">
+                        </a>
+                        <button mat-button [matMenuTriggerFor]="menu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: 50%">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <a class="nav-link active" href="#home">Inicio</a>
+                            <a class="nav-link" href="#offer">¿Que ofrecemos?</a>
+                            <a class="nav-link" href="#about">¿Quienes Somos?</a>
+                        </mat-menu>
+                        <div class="collapse navbar-collapse" id="main-navbar">
+                            <ul class="navbar-nav ml-50" id="nav">
+                                <li class="nav-item active"><a class="nav-link" href="#home">Inicio</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#offer">¿Que ofrecemos?</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#about">¿Quienes Somos?</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

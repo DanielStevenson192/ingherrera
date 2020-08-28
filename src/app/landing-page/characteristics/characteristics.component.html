@@ -1,0 +1,106 @@
+<section class="special-area bg-white section_padding_100" id="offer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading">
+                    <h2>OFRECEMOS</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="single-special wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="single-icon">
+                        <i class="material-icons" aria-hidden="true">contact_page</i>
+                    </div>
+                    <h4>CONSULTORIA EMPRESARIAL</h4>
+                    <p>Planeación y ejecución de <b>una agenda productiva,</b> Sesiones virtuales y/o presenciales personalizadas, para analizar, diagnosticar y establecer <b>planes de acción</b> para alcanzar objetivos comerciales y estratégicos para pequeñas
+                        y medianas empresas.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="single-special wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="single-icon">
+                        <i class="material-icons" aria-hidden="true">work</i>
+                    </div>
+                    <h4>DESARROLLO DE NEGOCIOS B2B</h4>
+                    <p>Servicios en apoyo, gestión y desarrollo de <b>procesos de negociación</b> (ventas empresariales) con cliente corporativos, en sinergia con las áreas administrativas, comerciales y operativas de nuestros clientes empresariales.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="single-special wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="single-icon">
+                        <i class="material-icons" aria-hidden="true">handyman</i>
+                    </div>
+                    <h4>CONSTRUCCIÓN DE EQUIPO EN DESARROLLO NEGOCIOS</h4>
+                    <p>Construcción, capacitación, entrenamiento, selección y liderazgo de talento humano orientado al <b>desarrollo de negocios,</b> que contribuyan de manera eficiente en el áreas de Ventas marketing & publicidad, investigación, Innovación
+                        y desarrollo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="special_description_area mt-150" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-5 ml-xl-auto">
+                    <div class="special_description_content">
+                        <h2>SOMOS INGHERRERA</h2>
+                        <p>una empresa colombiana con espíritu emprendedor cuya misión se enfoca al <b>desarrollo estratégico de negocios,</b> para contribuir al crecimiento económico de compañías que aportan VALOR al sector <em>Agro, Alimentos, Energías alternativas y las TIC´s en latinoamerica.</em></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form_page">
+                        <form (ngSubmit)="onSubmit(formulario)" #formulario="ngForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span *ngIf="formulario.submitted && formulario.controls['name'].errors" class="text-danger animated fadeIn">El nombre es obligatorio </span>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Ingresa tu nombre</mat-label>
+                                        <input matInput type="text" name="name" [(ngModel)]="info.name" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span *ngIf="formulario.submitted && formulario.controls['company'].errors" class="text-danger animated fadeIn">La compañia es obligatoria </span>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Ingresa el nombre de tu empresa o negocio</mat-label>
+                                        <input matInput type="text" name="company" [(ngModel)]="info.company" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span *ngIf="formulario.submitted && formulario.controls['description'].errors" class="text-danger animated fadeIn">La descripcion es obligatoria </span>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Breve descripcion de tus productos o servicios.</mat-label>
+                                        <input matInput type="text" name="description" [(ngModel)]="info.description" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <span *ngIf="formulario.submitted && formulario.controls['date'].errors" class="text-danger animated fadeIn">La fecha es obligatoria </span>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Selecciona un dia y una hora al que te podamos llamar</mat-label>
+                                        <input matInput type="datetime-local" name="date" [(ngModel)]="info.date" required>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row " style="margin-top: 20px; ">
+                                <div class="col-md-6 ">
+                                    <div class="sign-in-button" style="font-size: 14px; ">
+                                        <button mat-button type="submit" class="secondary-button">Enviar Informacion</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
